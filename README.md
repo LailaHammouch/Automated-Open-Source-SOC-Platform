@@ -2,11 +2,7 @@
 
 > Conception et déploiement d'une plateforme SOC (Security Operations Center) interne, entièrement basée sur des outils **open source**, pour un fournisseur de services de sécurité managés (MSSP).
 
-
-
 ---
-
-
 
 ## 🏗️ Architecture
 
@@ -20,7 +16,7 @@ La plateforme est organisée en **5 couches fonctionnelles** :
 | **Gestion des vulnérabilités** | OpenVAS | Scan CVE, priorisation des correctifs |
 | **Réponse & Forensique** | DFIR-IRIS, Velociraptor | Gestion des incidents, collecte d'artefacts en temps réel |
 
-![Architecture globale](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/ArchitecureGlobale.png)
+![Architecture globale](docs/architecture.png)
 
 Toutes les briques communiquent via API, avec des scripts Python développés sur-mesure pour combler l'absence de connecteurs natifs (ex : SOCFortress Copilot → IRIS, OpenVAS → IRIS, IRIS → Velociraptor).
 
@@ -57,38 +53,10 @@ Graylog (alerte corrélée) → SOCFortress Copilot (AI Router)
 
 Cette architecture illustre une approche pragmatique de l'IA en cybersécurité : **l'IA assiste, elle ne remplace pas** — elle réduit le temps d'analyse (MTTD/MTTR) sans retirer la décision finale à l'analyste SOC.
 
-## 🧪 Validation — Étude de cas : attaque SSH brute-force
-
-Scénario end-to-end simulé pour valider la chaîne complète :
-
-```
-Attaque (Hydra) → Zeek (capture réseau) → Wazuh (détection endpoint)
-   → Graylog (corrélation + règle de détection)
-   → SOCFortress Copilot (enrichissement IA)
-   → DFIR-IRIS (création + qualification du cas)
-   → Velociraptor (collecte forensique + reconstruction de chronologie)
-```
-
-**Résultats :**
-
-| Critère | Résultat |
-|---|---|
-| Attaque détectée | ✅ |
-| Alerte générée automatiquement | ✅ |
-| Cas d'incident créé automatiquement | ✅ |
-| Transmission automatisée vers DFIR-IRIS | ✅ |
-| Prise en charge complète de bout en bout | ✅ |
-
-→ Amélioration du **MTTD** (Mean Time to Detect) et **MTTR** (Mean Time to Respond) grâce à l'automatisation des transmissions inter-outils, éliminant la corrélation manuelle.
-
-## 🔍 Méthodologie de sélection des outils
-
-Chaque outil a été choisi via une grille de critères (coût, fiabilité, interopérabilité, scalabilité, confidentialité des données) comparant 4 à 5 alternatives par catégorie — voir [`docs/benchmark-summary.md`](docs/benchmark-summary.md) pour la synthèse complète des tableaux d'évaluation (SIEM, EDR, NSM, LLM local, scanners de vulnérabilités, plateformes DFIR/IRP).
-
 ## 📂 Structure du repo
 
 ```
-├── docs/           # Diagrammes d'architecture, workflow, benchmarks
+├── docs/           # Diagrammes d'architecture
 ├── scripts/        # Scripts d'intégration Python (API bridges)
 └── configs/        # Configurations Filebeat + pipelines Graylog
 ```
