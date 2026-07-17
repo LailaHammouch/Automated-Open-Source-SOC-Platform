@@ -2,13 +2,11 @@
 
 > Conception et déploiement d'une plateforme SOC (Security Operations Center) interne, entièrement basée sur des outils **open source**, pour un fournisseur de services de sécurité managés (MSSP).
 
-Réalisé au sein de **Devoteam Cyber Trust Africa**.
+
 
 ---
 
-## 📌 Contexte
 
-Le SOC interne du MSSP reposait initialement sur **Wazuh** seul, limitant la visibilité réseau, l'automatisation du traitement des alertes et les capacités d'investigation. Ce projet étend cette base vers une plateforme intégrée de **détection → corrélation → réponse → investigation forensique**, avec assistance par IA locale.
 
 ## 🏗️ Architecture
 
