@@ -55,7 +55,7 @@ Cette architecture illustre une approche pragmatique de l'IA en cybersécurité 
 🔄 Workflow de réponse aux incidents
 
 De la détection à la clôture, chaque incident suit un cycle DFIR structuré et automatisé entre les outils :
-![ Workflow de réponse aux incidents](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/Docs/ArchitecureGlobale.png)
+![ Workflow de réponse aux incidents](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/Docs/incident-workflow.png)
 
 
 ## 📂 Structure du repo
