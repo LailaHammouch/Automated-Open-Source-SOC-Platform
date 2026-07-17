@@ -1,0 +1,11 @@
+filebeat.inputs:
+- type: log
+enabled: true
+paths:
+- /var/ossec/logs/alerts/alerts.json
+- /var/ossec/logs/archives/archives.json
+fields:
+log_type: wazuh
+fields_under_root: true
+output.logstash:
+hosts: ["@ip:5044"]
