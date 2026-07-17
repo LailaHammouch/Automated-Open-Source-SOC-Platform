@@ -20,7 +20,7 @@ La plateforme est organisée en **5 couches fonctionnelles** :
 | **Gestion des vulnérabilités** | OpenVAS | Scan CVE, priorisation des correctifs |
 | **Réponse & Forensique** | DFIR-IRIS, Velociraptor | Gestion des incidents, collecte d'artefacts en temps réel |
 
-![Architecture globale](docs/architecture.png)
+![Architecture globale](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/ArchitecureGlobale.png)
 
 Toutes les briques communiquent via API, avec des scripts Python développés sur-mesure pour combler l'absence de connecteurs natifs (ex : SOCFortress Copilot → IRIS, OpenVAS → IRIS, IRIS → Velociraptor).
 
