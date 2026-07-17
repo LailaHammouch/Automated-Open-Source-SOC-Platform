@@ -62,7 +62,6 @@ De la détection à la clôture, chaque incident suit un cycle DFIR structuré e
 
 ```
 ├── docs/           # Diagrammes d'architecture
-├── scripts/        # Scripts d'intégration Python (API bridges)
 └── configs/        # Configurations Filebeat + pipelines Graylog
 ```
 
