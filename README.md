@@ -52,6 +52,11 @@ Graylog (alerte corrélée) → SOCFortress Copilot (AI Router)
 | Conformité MSSP | ✅ Adapté aux exigences de confidentialité | ⚠️ Nécessite des garanties contractuelles |
 
 Cette architecture illustre une approche pragmatique de l'IA en cybersécurité : **l'IA assiste, elle ne remplace pas** — elle réduit le temps d'analyse (MTTD/MTTR) sans retirer la décision finale à l'analyste SOC.
+🔄 Workflow de réponse aux incidents
+
+De la détection à la clôture, chaque incident suit un cycle DFIR structuré et automatisé entre les outils :
+![ Workflow de réponse aux incidents](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/Docs/ArchitecureGlobale.png)
+
 
 ## 📂 Structure du repo
 
