@@ -2,7 +2,7 @@
 
 > Conception et déploiement d'une plateforme SOC (Security Operations Center) interne, entièrement basée sur des outils **open source**, pour un fournisseur de services de sécurité managés (MSSP).
 
-📄 **[Rapport technique complet (PDF)](rapport-technique.pdf)** — déploiement de l'infrastructure, intégration des composants, validation par scénario d'attaque, et annexes (configurations Filebeat, scripts Python d'intégration).
+📄 **[Rapport technique complet (PDF)](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/rapport-technique.pdf)** — déploiement de l'infrastructure, intégration des composants, validation par scénario d'attaque, et annexes (configurations Filebeat, scripts Python d'intégration).
 
 ---
 
@@ -20,7 +20,7 @@ La plateforme est organisée en **5 couches fonctionnelles** :
 
 ![Architecture globale](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/Docs/ArchitecureGlobale.png)
 
-Toutes les briques communiquent via API, avec des scripts Python développés sur-mesure pour combler l'absence de connecteurs natifs (ex : SOCFortress Copilot → IRIS, OpenVAS → IRIS, IRIS → Velociraptor) — voir le [rapport technique](rapport-technique.pdf), Annexe B, pour le détail de ces scripts.
+Toutes les briques communiquent via API, avec des scripts Python développés sur-mesure pour combler l'absence de connecteurs natifs (ex : SOCFortress Copilot → IRIS, OpenVAS → IRIS, IRIS → Velociraptor) — voir le [rapport technique](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/rapport-technique.pdf), Annexe B, pour le détail de ces scripts.
 
 ## ⚙️ Stack technique
 
