@@ -2,6 +2,8 @@
 
 > Conception et déploiement d'une plateforme SOC (Security Operations Center) interne, entièrement basée sur des outils **open source**, pour un fournisseur de services de sécurité managés (MSSP).
 
+📄 **[Rapport technique complet (PDF)](rapport-technique.pdf)** — déploiement de l'infrastructure, intégration des composants, validation par scénario d'attaque, et annexes (configurations Filebeat, scripts Python d'intégration).
+
 ---
 
 ## 🏗️ Architecture
@@ -18,7 +20,7 @@ La plateforme est organisée en **5 couches fonctionnelles** :
 
 ![Architecture globale](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/Docs/ArchitecureGlobale.png)
 
-Toutes les briques communiquent via API, avec des scripts Python développés sur-mesure pour combler l'absence de connecteurs natifs (ex : SOCFortress Copilot → IRIS, OpenVAS → IRIS, IRIS → Velociraptor).
+Toutes les briques communiquent via API, avec des scripts Python développés sur-mesure pour combler l'absence de connecteurs natifs (ex : SOCFortress Copilot → IRIS, OpenVAS → IRIS, IRIS → Velociraptor) — voir le [rapport technique](rapport-technique.pdf), Annexe B, pour le détail de ces scripts.
 
 ## ⚙️ Stack technique
 
@@ -52,18 +54,19 @@ Graylog (alerte corrélée) → SOCFortress Copilot (AI Router)
 | Conformité MSSP | ✅ Adapté aux exigences de confidentialité | ⚠️ Nécessite des garanties contractuelles |
 
 Cette architecture illustre une approche pragmatique de l'IA en cybersécurité : **l'IA assiste, elle ne remplace pas** — elle réduit le temps d'analyse (MTTD/MTTR) sans retirer la décision finale à l'analyste SOC.
-🔄 Workflow de réponse aux incidents
+
+## 🔄 Workflow de réponse aux incidents
 
 De la détection à la clôture, chaque incident suit un cycle DFIR structuré et automatisé entre les outils :
-![ Workflow de réponse aux incidents](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/Docs/incident-workflow.png)
 
+![Workflow de réponse aux incidents](https://github.com/LailaHammouch/Automated-Open-Source-SOC-Platform/blob/main/Docs/incident-workflow.png)
 
 ## 📂 Structure du repo
 
 ```
-├── docs/           # Diagrammes d'architecture
-└── configs/        # Configurations Filebeat + pipelines Graylog
-```
+├── rapport-technique.pdf   # Déploiement, intégrations, validation, configs & scripts (annexes)
+├── docs/                   # Diagrammes d'architecture
+
 
 ## 🚀 Perspectives
 
