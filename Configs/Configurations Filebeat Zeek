@@ -1,9 +1,0 @@
-filebeat.inputs:
-- type: log
-enabled: true
-paths:
-- /opt/zeek/logs/current/*.log
-fields:
-log_type: zeek
-output.logstash:
-hosts: ["@ip:5044"]
